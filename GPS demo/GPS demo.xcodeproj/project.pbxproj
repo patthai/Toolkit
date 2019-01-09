@@ -14,6 +14,9 @@
 		0A4FBD7021E277110014EA62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4FBD6E21E277110014EA62 /* LaunchScreen.storyboard */; };
 		0A4FBD7B21E277110014EA62 /* GPS_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4FBD7A21E277110014EA62 /* GPS_demoTests.swift */; };
 		0A4FBD8621E277110014EA62 /* GPS_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4FBD8521E277110014EA62 /* GPS_demoUITests.swift */; };
+		0A988E6021E5CBDF00380BF6 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A988E5F21E5CBDF00380BF6 /* LocationCell.swift */; };
+		0A988E6921E5CD4200380BF6 /* LocationObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A988E6821E5CD4200380BF6 /* LocationObject.swift */; };
+		0A988E6D21E5D6C900380BF6 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A988E6C21E5D6C900380BF6 /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		0A5E096B21E5B37500D20FE3 /* medialab.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = medialab.gpx; path = ../../../../Desktop/medialab.gpx; sourceTree = "<group>"; };
 		0A5E096C21E5B37500D20FE3 /* sidpack.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = sidpack.gpx; path = ../../../../Desktop/sidpack.gpx; sourceTree = "<group>"; };
 		0A5E096D21E5B37500D20FE3 /* recreation_center.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = recreation_center.gpx; path = ../../../../Desktop/recreation_center.gpx; sourceTree = "<group>"; };
+		0A988E5F21E5CBDF00380BF6 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		0A988E6821E5CD4200380BF6 /* LocationObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationObject.swift; sourceTree = "<group>"; };
+		0A988E6C21E5D6C900380BF6 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +109,12 @@
 		0A4FBD6421E277100014EA62 /* GPS demo */ = {
 			isa = PBXGroup;
 			children = (
+				0A4FBD6921E277100014EA62 /* Main.storyboard */,
 				0A4FBD6521E277100014EA62 /* AppDelegate.swift */,
 				0A4FBD6721E277100014EA62 /* ViewController.swift */,
-				0A4FBD6921E277100014EA62 /* Main.storyboard */,
+				0A988E5F21E5CBDF00380BF6 /* LocationCell.swift */,
+				0A988E6C21E5D6C900380BF6 /* LocationViewController.swift */,
+				0A988E6821E5CD4200380BF6 /* LocationObject.swift */,
 				0A4FBD6C21E277110014EA62 /* Assets.xcassets */,
 				0A4FBD6E21E277110014EA62 /* LaunchScreen.storyboard */,
 				0A4FBD7121E277110014EA62 /* Info.plist */,
@@ -262,8 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A988E6D21E5D6C900380BF6 /* LocationViewController.swift in Sources */,
+				0A988E6021E5CBDF00380BF6 /* LocationCell.swift in Sources */,
 				0A4FBD6821E277100014EA62 /* ViewController.swift in Sources */,
 				0A4FBD6621E277100014EA62 /* AppDelegate.swift in Sources */,
+				0A988E6921E5CD4200380BF6 /* LocationObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

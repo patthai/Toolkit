@@ -2,6 +2,11 @@ import UIKit
 import MapKit
 import CoreLocation
 
+struct global {
+    static var user_lat = 0.0
+    static var user_lon = 0.0
+    static var locations: [UserSavedLocation] = []
+}
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -16,6 +21,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+         global.locations = createArray()
+        
+        
+    }
+    
+    func createArray() -> [UserSavedLocation]{
+        var tempLocation: [UserSavedLocation] = []
+        let home = UserSavedLocation(Location: "Home", Lat: "42.359870", Lon:"-71.102650" )
+        let gym = UserSavedLocation(Location: "Gym", Lat: "42.361505", Lon:"-71.090588" )
+        let work = UserSavedLocation(Location: "Work", Lat: "42.360380", Lon:"-71.087310" )
+        
+        tempLocation.append(home)
+        tempLocation.append(gym)
+        tempLocation.append(work)
+        return tempLocation
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,21 +56,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation:CLLocation = locations[0] as CLLocation
         
-        manager.stopUpdatingLocation()
+        //manager.stopUpdatingLocation()
         
         let coordinations = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude,longitude: userLocation.coordinate.longitude)
         let span = MKCoordinateSpan(latitudeDelta: 0.01,longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: coordinations, span: span)
         
-        let lat = userLocation.coordinate.latitude
-        let long = userLocation.coordinate.longitude
+        global.user_lat = userLocation.coordinate.latitude
+        global.user_lon = userLocation.coordinate.longitude
+        
+        print (global.user_lat, global.user_lat)
+        
         
         mapView.setRegion(region, animated: true)
-        coordination_label.text = String(lat) + "," + String(long)
+        coordination_label.text = String(global.user_lat) + "," + String(global.user_lon)
         
         var geocoder = CLGeocoder()
         // Create Location
-        let location = CLLocation(latitude: lat, longitude: long)
+        let location = CLLocation(latitude: global.user_lat, longitude:  global.user_lon)
         
         // Geocode Location
         geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
@@ -70,6 +93,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
        
     }
+    func ClosestUserLocation()
+        {
+        
+        
+        }
 }
 
 extension CLPlacemark {
