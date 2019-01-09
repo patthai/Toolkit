@@ -39,7 +39,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         manager.stopUpdatingLocation()
         
         let coordinations = CLLocationCoordinate2D(latitude: userLocation.coordinate.latitude,longitude: userLocation.coordinate.longitude)
-        let span = MKCoordinateSpan(latitudeDelta: 0.2,longitudeDelta: 0.2)
+        let span = MKCoordinateSpan(latitudeDelta: 0.01,longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: coordinations, span: span)
         
         let lat = userLocation.coordinate.latitude

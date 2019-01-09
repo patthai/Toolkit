@@ -47,6 +47,9 @@
 		0A4FBD8121E277110014EA62 /* GPS demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GPS demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4FBD8521E277110014EA62 /* GPS_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPS_demoUITests.swift; sourceTree = "<group>"; };
 		0A4FBD8721E277110014EA62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A5E096B21E5B37500D20FE3 /* medialab.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = medialab.gpx; path = ../../../../Desktop/medialab.gpx; sourceTree = "<group>"; };
+		0A5E096C21E5B37500D20FE3 /* sidpack.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = sidpack.gpx; path = ../../../../Desktop/sidpack.gpx; sourceTree = "<group>"; };
+		0A5E096D21E5B37500D20FE3 /* recreation_center.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = recreation_center.gpx; path = ../../../../Desktop/recreation_center.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,9 @@
 		0A4FBD5921E277100014EA62 = {
 			isa = PBXGroup;
 			children = (
+				0A5E096B21E5B37500D20FE3 /* medialab.gpx */,
+				0A5E096D21E5B37500D20FE3 /* recreation_center.gpx */,
+				0A5E096C21E5B37500D20FE3 /* sidpack.gpx */,
 				0A4FBD6421E277100014EA62 /* GPS demo */,
 				0A4FBD7921E277110014EA62 /* GPS demoTests */,
 				0A4FBD8421E277110014EA62 /* GPS demoUITests */,

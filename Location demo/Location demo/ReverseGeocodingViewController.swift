@@ -37,7 +37,7 @@ class ReverseGeocodingViewController: UIViewController {
             locationLabel.text = "Unable to Find Address for Location"
             
         } else {
-            if let placemarks = placemarks, let placemark = placemarks.first {
+            if  wlet placemarks = placemarks, let placemark = placemarks.first {
                 locationLabel.text = placemark.compactAddress
             } else {
                 locationLabel.text = "No Matching Addresses Found"
