@@ -50,9 +50,9 @@
 		0A4FBD8121E277110014EA62 /* GPS demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GPS demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A4FBD8521E277110014EA62 /* GPS_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPS_demoUITests.swift; sourceTree = "<group>"; };
 		0A4FBD8721E277110014EA62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A5E096B21E5B37500D20FE3 /* medialab.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = medialab.gpx; path = ../../../../Desktop/medialab.gpx; sourceTree = "<group>"; };
-		0A5E096C21E5B37500D20FE3 /* sidpack.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = sidpack.gpx; path = ../../../../Desktop/sidpack.gpx; sourceTree = "<group>"; };
-		0A5E096D21E5B37500D20FE3 /* recreation_center.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = recreation_center.gpx; path = ../../../../Desktop/recreation_center.gpx; sourceTree = "<group>"; };
+		0A773FA921E68B4E009850DC /* MITgym.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = MITgym.gpx; path = location/MITgym.gpx; sourceTree = "<group>"; };
+		0A773FAA21E68B4F009850DC /* medialab.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = medialab.gpx; path = location/medialab.gpx; sourceTree = "<group>"; };
+		0A773FAB21E68B4F009850DC /* sidpac.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = sidpac.gpx; path = location/sidpac.gpx; sourceTree = "<group>"; };
 		0A988E5F21E5CBDF00380BF6 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		0A988E6821E5CD4200380BF6 /* LocationObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationObject.swift; sourceTree = "<group>"; };
 		0A988E6C21E5D6C900380BF6 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -86,9 +86,9 @@
 		0A4FBD5921E277100014EA62 = {
 			isa = PBXGroup;
 			children = (
-				0A5E096B21E5B37500D20FE3 /* medialab.gpx */,
-				0A5E096D21E5B37500D20FE3 /* recreation_center.gpx */,
-				0A5E096C21E5B37500D20FE3 /* sidpack.gpx */,
+				0A773FAA21E68B4F009850DC /* medialab.gpx */,
+				0A773FA921E68B4E009850DC /* MITgym.gpx */,
+				0A773FAB21E68B4F009850DC /* sidpac.gpx */,
 				0A4FBD6421E277100014EA62 /* GPS demo */,
 				0A4FBD7921E277110014EA62 /* GPS demoTests */,
 				0A4FBD8421E277110014EA62 /* GPS demoUITests */,
@@ -109,14 +109,14 @@
 		0A4FBD6421E277100014EA62 /* GPS demo */ = {
 			isa = PBXGroup;
 			children = (
-				0A4FBD6921E277100014EA62 /* Main.storyboard */,
-				0A4FBD6521E277100014EA62 /* AppDelegate.swift */,
-				0A4FBD6721E277100014EA62 /* ViewController.swift */,
 				0A988E5F21E5CBDF00380BF6 /* LocationCell.swift */,
 				0A988E6C21E5D6C900380BF6 /* LocationViewController.swift */,
 				0A988E6821E5CD4200380BF6 /* LocationObject.swift */,
-				0A4FBD6C21E277110014EA62 /* Assets.xcassets */,
+				0A4FBD6521E277100014EA62 /* AppDelegate.swift */,
+				0A4FBD6721E277100014EA62 /* ViewController.swift */,
+				0A4FBD6921E277100014EA62 /* Main.storyboard */,
 				0A4FBD6E21E277110014EA62 /* LaunchScreen.storyboard */,
+				0A4FBD6C21E277110014EA62 /* Assets.xcassets */,
 				0A4FBD7121E277110014EA62 /* Info.plist */,
 			);
 			path = "GPS demo";
@@ -451,7 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z83R2NMRNH;
+				DEVELOPMENT_TEAM = 7UQD3GFB9F;
 				INFOPLIST_FILE = "GPS demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,7 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Z83R2NMRNH;
+				DEVELOPMENT_TEAM = 7UQD3GFB9F;
 				INFOPLIST_FILE = "GPS demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

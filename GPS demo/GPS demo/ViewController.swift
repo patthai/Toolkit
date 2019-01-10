@@ -22,7 +22,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
          global.locations = createArray()
-        
+        locateMe((Any).self)
         
     }
     
@@ -65,11 +65,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         global.user_lat = userLocation.coordinate.latitude
         global.user_lon = userLocation.coordinate.longitude
         
-        print (global.user_lat, global.user_lat)
+        //print (global.user_lat, global.user_lat)
         
         
         mapView.setRegion(region, animated: true)
         coordination_label.text = String(global.user_lat) + "," + String(global.user_lon)
+        ClosestUserLocation()
         
         var geocoder = CLGeocoder()
         // Create Location
@@ -95,8 +96,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     func ClosestUserLocation()
         {
-        
-        
+            var least_distance = Float (1)
+            var current_location = ""
+            for searchlocation in global.locations{
+                var lat_dif = Float(global.user_lat) - Float(searchlocation.Lat)!
+                var lon_dif = Float(global.user_lon) - Float(searchlocation.Lon)!
+                var distance = Float(hypotf(lat_dif, lon_dif))
+                if (distance < least_distance) {
+                    least_distance = distance
+                    current_location = searchlocation.LocationName
+                }
+            
+            }
+        print(current_location)
         }
 }
 
