@@ -38,13 +38,6 @@
                                     <action selector="press_reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eNm-I2-Tfd"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="0.5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1sc-Jh-R6j">
-                                <rect key="frame" x="218" y="118" width="105" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sampling Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xc7-Lf-DrZ">
                                 <rect key="frame" x="72" y="123" width="111" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -52,10 +45,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eyO-Q5-9bd">
-                                <rect key="frame" x="70" y="237" width="262" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="timer : 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKM-H9-LW2">
                                 <rect key="frame" x="163" y="266" width="74" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -77,21 +66,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jIo-di-XXS">
+                                <rect key="frame" x="72" y="225" width="251" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KFd-uL-18Q">
+                                <rect key="frame" x="210" y="119" width="121" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="0.5"/>
+                                    <segment title="0.1"/>
+                                    <segment title="0.05"/>
+                                </segments>
+                                <connections>
+                                    <action selector="rate_button:" destination="BYZ-38-t0r" eventType="valueChanged" id="TrB-M2-3fR"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="progress" destination="jIo-di-XXS" id="GNO-SR-1hM"/>
                         <outlet property="record_button" destination="bk1-G4-Q4C" id="WqO-AA-zCl"/>
-                        <outlet property="record_duration" destination="1sc-Jh-R6j" id="xT5-KV-jq3"/>
+                        <outlet property="record_duration" destination="jX5-Sw-5Tz" id="Se8-In-CaO"/>
                         <outlet property="reset_button" destination="Vf0-rf-icg" id="Ov8-2G-BZp"/>
-                        <outlet property="sampling_rate" destination="jX5-Sw-5Tz" id="NE0-hp-5jJ"/>
+                        <outlet property="sampling_rate" destination="KFd-uL-18Q" id="gkm-zO-xTz"/>
                         <outlet property="timer" destination="hKM-H9-LW2" id="wFm-fo-YNi"/>
-                        <outlet property="timer_slider" destination="eyO-Q5-9bd" id="iUU-90-fb4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="156.52173913043478" y="20.758928571428569"/>
         </scene>
     </scenes>
 </document>
