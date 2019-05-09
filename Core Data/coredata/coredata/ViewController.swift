@@ -117,6 +117,7 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
+        print (people.count)
         return people.count
     }
     
