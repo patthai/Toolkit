@@ -1,0 +1,29 @@
+PODS:
+  - BLECore (3.0.16):
+    - Logging (= 3.0.16)
+  - BoseWearable (3.0.16):
+    - BLECore (= 3.0.16)
+    - Logging (= 3.0.16)
+  - Logging (3.0.16)
+
+DEPENDENCIES:
+  - BLECore (from `Libraries/BoseWearable`)
+  - BoseWearable (from `Libraries/BoseWearable`)
+  - Logging (from `Libraries/BoseWearable`)
+
+EXTERNAL SOURCES:
+  BLECore:
+    :path: Libraries/BoseWearable
+  BoseWearable:
+    :path: Libraries/BoseWearable
+  Logging:
+    :path: Libraries/BoseWearable
+
+SPEC CHECKSUMS:
+  BLECore: 6562394f285ed4546974df494416e53e8fd05cb1
+  BoseWearable: 19021aae8a0ecb2a8e5b314159adeccabaa6a6f0
+  Logging: a7daf64b0eb3c9a68d70cac951ec437a957d7516
+
+PODFILE CHECKSUM: f372b065c2224f6f0d78f74c4864b38b68bc75e4
+
+COCOAPODS: 1.6.1

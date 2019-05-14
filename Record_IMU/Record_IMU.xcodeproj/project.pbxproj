@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081C5FA0CB233888F1934F38 /* Pods_Record_IMU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA49D9F46C51F7B109AE178 /* Pods_Record_IMU.framework */; };
 		0A17FD172283F844008EE177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17FD162283F844008EE177 /* AppDelegate.swift */; };
 		0A17FD192283F844008EE177 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A17FD182283F844008EE177 /* ViewController.swift */; };
 		0A17FD1C2283F844008EE177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A17FD1A2283F844008EE177 /* Main.storyboard */; };
 		0A17FD1F2283F844008EE177 /* Record_IMU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A17FD1D2283F844008EE177 /* Record_IMU.xcdatamodeld */; };
 		0A17FD212283F844008EE177 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A17FD202283F844008EE177 /* Assets.xcassets */; };
 		0A17FD242283F844008EE177 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A17FD222283F844008EE177 /* LaunchScreen.storyboard */; };
+		0A17FD2C22841B21008EE177 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A17FD2B22841B21008EE177 /* Charts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		0A17FD202283F844008EE177 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A17FD232283F844008EE177 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A17FD252283F844008EE177 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A17FD2B22841B21008EE177 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CA49D9F46C51F7B109AE178 /* Pods_Record_IMU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Record_IMU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F991B4A7626466DC78831D4 /* Pods-Record_IMU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Record_IMU.release.xcconfig"; path = "Target Support Files/Pods-Record_IMU/Pods-Record_IMU.release.xcconfig"; sourceTree = "<group>"; };
+		C23589BFC4EAEE5A3D14ED12 /* Pods-Record_IMU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Record_IMU.debug.xcconfig"; path = "Target Support Files/Pods-Record_IMU/Pods-Record_IMU.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A17FD2C22841B21008EE177 /* Charts.framework in Frameworks */,
+				081C5FA0CB233888F1934F38 /* Pods_Record_IMU.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,8 @@
 			children = (
 				0A17FD152283F844008EE177 /* Record_IMU */,
 				0A17FD142283F844008EE177 /* Products */,
+				24D4D923AB856F036534E780 /* Pods */,
+				F6486AAA08C8DB9FBE2815E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +77,24 @@
 			path = Record_IMU;
 			sourceTree = "<group>";
 		};
+		24D4D923AB856F036534E780 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C23589BFC4EAEE5A3D14ED12 /* Pods-Record_IMU.debug.xcconfig */,
+				2F991B4A7626466DC78831D4 /* Pods-Record_IMU.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F6486AAA08C8DB9FBE2815E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A17FD2B22841B21008EE177 /* Charts.framework */,
+				1CA49D9F46C51F7B109AE178 /* Pods_Record_IMU.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A17FD282283F844008EE177 /* Build configuration list for PBXNativeTarget "Record_IMU" */;
 			buildPhases = (
+				694D2B1DA05DBA950CE89DF5 /* [CP] Check Pods Manifest.lock */,
 				0A17FD0F2283F844008EE177 /* Sources */,
 				0A17FD102283F844008EE177 /* Frameworks */,
 				0A17FD112283F844008EE177 /* Resources */,
+				3DC43611C39913404E96B2DA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +162,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DC43611C39913404E96B2DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Record_IMU/Pods-Record_IMU-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Record_IMU/Pods-Record_IMU-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		694D2B1DA05DBA950CE89DF5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Record_IMU-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A17FD0F2283F844008EE177 /* Sources */ = {
@@ -284,6 +361,7 @@
 		};
 		0A17FD292283F844008EE177 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C23589BFC4EAEE5A3D14ED12 /* Pods-Record_IMU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +380,7 @@
 		};
 		0A17FD2A2283F844008EE177 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F991B4A7626466DC78831D4 /* Pods-Record_IMU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

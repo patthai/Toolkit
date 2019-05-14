@@ -1,0 +1,38 @@
+PODS:
+  - BLECore (3.0.16):
+    - Logging (= 3.0.16)
+  - BoseWearable (3.0.16):
+    - BLECore (= 3.0.16)
+    - Logging (= 3.0.16)
+  - Charts (3.3.0):
+    - Charts/Core (= 3.3.0)
+  - Charts/Core (3.3.0)
+  - Logging (3.0.16)
+
+DEPENDENCIES:
+  - BLECore (from `../../`)
+  - BoseWearable (from `../../`)
+  - Charts
+  - Logging (from `../../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Charts
+
+EXTERNAL SOURCES:
+  BLECore:
+    :path: "../../"
+  BoseWearable:
+    :path: "../../"
+  Logging:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  BLECore: 6562394f285ed4546974df494416e53e8fd05cb1
+  BoseWearable: 19021aae8a0ecb2a8e5b314159adeccabaa6a6f0
+  Charts: ec1f57f9340054155691e84d4544a1d239d382c5
+  Logging: a7daf64b0eb3c9a68d70cac951ec437a957d7516
+
+PODFILE CHECKSUM: 67bb3e72202dc4bd0533d71fcf9a1a896ce6b521
+
+COCOAPODS: 1.6.1

@@ -41,7 +41,8 @@ class ViewController: UIViewController {
                 uGX = data?.rotationRate.x ?? 0
                 uGY = data?.rotationRate.y ?? 0
                 uGZ = data?.rotationRate.z ?? 0
-                
+                self.numbers.append([uAX, uAY, uAZ])
+                self.updateGraph()
             }
         }
     }
@@ -53,6 +54,7 @@ class ViewController: UIViewController {
         var number3 = Double.random(in: 8.0 ..< 10.0)
         numbers.append([number1, number2, number3]) //here we add the data to the array.
         //print(numbers)
+        
         updateGraph()
     }
     

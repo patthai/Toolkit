@@ -32,6 +32,16 @@
                         <viewLayoutGuide key="safeArea" id="fi6-IU-swl"/>
                     </view>
                     <navigationItem key="navigationItem" id="u7r-Ln-MIX">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="r7q-VQ-bz7">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OKZ-NH-gq3">
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Export"/>
+                                <connections>
+                                    <action selector="export:" destination="jgs-OI-oXI" eventType="touchUpInside" id="MgE-7v-rag"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="JjY-bH-2N1">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="push" id="u1O-17-zTT"/>

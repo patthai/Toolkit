@@ -1,0 +1,6 @@
+framework module Pods_BoseBasic {
+  umbrella header "Pods-BoseBasic-umbrella.h"
+
+  export *
+  module * { export * }
+}

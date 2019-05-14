@@ -1,0 +1,11 @@
+platform :ios, '11.4'
+
+target 'HeadingExample' do
+  use_frameworks!
+  inhibit_all_warnings!
+
+  pod 'BLECore', :path => '../../'
+  pod 'Logging', :path => '../../'
+  pod 'BoseWearable', :path => '../../'
+  pod 'WorldMagneticModel', '~> 1'
+end

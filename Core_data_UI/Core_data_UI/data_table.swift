@@ -33,7 +33,65 @@ class data_table: UIViewController {
         }
         self.tableView.reloadData()
     }
+    @IBAction func export(_ sender: Any) {
+        print(people.count)
+        
+        for data in people as! [NSManagedObject] {
+            var p_email = data.value(forKey: "email") as! String
+            var p_password = data.value(forKey: "password") as! String
+            print(p_email, p_password)
+        }
+        
+        export_to_csv()
+    }
     
+    func export_to_csv(){
+        var file = "test"
+        let fileName = "\(file).csv"
+        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
+        
+        var csvText = "username, password\n"
+        
+        
+        if people.count > 0 {
+            
+            for data in people as! [NSManagedObject] {
+                var p_email = data.value(forKey: "email") as! String
+                var p_password = data.value(forKey: "password") as! String
+                print(p_email, p_password)
+                
+                let newLine = "\(p_email),\(p_password)\n"
+                
+                csvText = csvText + newLine
+            }
+            
+            
+            
+            do {
+                try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
+                
+                let vc = UIActivityViewController(activityItems: [path], applicationActivities: [])
+                vc.excludedActivityTypes = [
+                    UIActivity.ActivityType.assignToContact,
+                    UIActivity.ActivityType.saveToCameraRoll,
+                    UIActivity.ActivityType.postToFlickr,
+                    UIActivity.ActivityType.postToVimeo,
+                    UIActivity.ActivityType.postToTencentWeibo,
+                    UIActivity.ActivityType.postToTwitter,
+                    UIActivity.ActivityType.postToFacebook,
+                    UIActivity.ActivityType.openInIBooks
+                ]
+                present(vc, animated: true, completion: nil)
+                
+            } catch {
+                
+                print("Failed to create file")
+                print("\(error)")
+            }
+            
+        }
+    }
+
     
     
     
