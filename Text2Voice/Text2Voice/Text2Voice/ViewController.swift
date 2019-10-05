@@ -35,9 +35,9 @@ class ViewController: UIViewController {
     
     @IBAction func textToSpeech(_ sender: Any) {
         myUtterance = AVSpeechUtterance(string: textView.text)
-        myUtterance.rate = 0.2
-        myUtterance.pitchMultiplier = 4.0
-        myUtterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Daniel-compact")
+        myUtterance.rate = 0.3
+        myUtterance.pitchMultiplier = 2.0
+        myUtterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Sin-Ji-compact")
         synth.speak(myUtterance)
     }
     

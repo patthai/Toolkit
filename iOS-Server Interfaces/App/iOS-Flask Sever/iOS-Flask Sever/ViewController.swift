@@ -10,7 +10,7 @@ import UIKit
 
 //////////////////////////////////Server Configuration
 typealias StringCompletion      = (_ success: Bool, _ string: String) -> Void
-var apiBaseURL: String = "https://62ba5783.ngrok.io"
+var apiBaseURL: String = "https://0336c981.ngrok.io"
 
 
 class ViewController: UIViewController {
